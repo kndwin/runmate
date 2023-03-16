@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { Button } from "@runmate/ui/react";
 import { signIn, signOut } from "next-auth/react";
 
 import { api, type RouterOutputs } from "~/utils/api";
@@ -67,8 +68,7 @@ const CreatePostForm: React.FC = () => {
           {error.data.zodError.fieldErrors.content}
         </span>
       )}
-      <button
-        className="rounded bg-pink-400 p-2 font-bold"
+      <Button
         onClick={() => {
           mutate({
             title,
@@ -77,7 +77,7 @@ const CreatePostForm: React.FC = () => {
         }}
       >
         Create
-      </button>
+      </Button>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 /** @type {import("tailwindcss").Config} */
 const config = {
-  content: ["./src/**/*.tsx"],
+  content: ["./src/**/*.{ts,tsx}", "../../packages/ui/react/src/**/*.{ts,tsx}"],
   // @ts-ignore
-  presets: [require("@acme/tailwind-config")],
+  presets: [require("@runmate/tailwind-config")],
 };
 
 module.exports = config;
